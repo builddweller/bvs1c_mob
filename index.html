@@ -32,11 +32,14 @@
       const canvas = document.getElementById('canvas');
       const ctx = canvas.getContext('2d');
       
-      // 이미지 파일들
-      const images = [];
-      for (let i = c0001; i <= c0080; i++) {
-        images.push(`https://raw.githubusercontent.com/builddweller/bvs1_image/main/bvs1c/${i}.jpg`);
-      }
+            // 이미지 파일들
+const images = [];
+for (let i = 1; i <= 80; i++) {
+  const c = `c${String(i).padStart(4, '0')}`;
+  images.push(`https://raw.githubusercontent.com/builddweller/bvs1_image/main/bvs1c/${c}.jpg`);
+}
+
+console.log(images);
 
      let currentIndex = 49; // 50번째 이미지부터 시작
       let isDragging = false;
